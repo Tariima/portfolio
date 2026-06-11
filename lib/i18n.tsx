@@ -35,8 +35,7 @@ export const dict = {
     skills: { title: "Stack & Skills" },
     projects: {
       title: "Proyectos",
-      subtitle:
-        "Una selección de lo que construí. Algunos proyectos profesionales se describen sin nombrar al cliente.",
+      subtitle: "Una selección de lo que construí — de la base de datos al deploy.",
       featuredLabel: "Destacados",
       otherLabel: "Otros proyectos y fundamentos",
       caseStudy: "Caso de estudio",
@@ -69,8 +68,7 @@ export const dict = {
     skills: { title: "Stack & Skills" },
     projects: {
       title: "Projects",
-      subtitle:
-        "A selection of what I've built. Some professional projects are described without naming the client.",
+      subtitle: "A selection of what I've built — from the database to the deploy.",
       featuredLabel: "Featured",
       otherLabel: "Other projects & fundamentals",
       caseStudy: "Case study",

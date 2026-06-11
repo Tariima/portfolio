@@ -3,7 +3,7 @@
 import { useApp } from "@/lib/i18n";
 import { projects } from "@/content/data";
 import Reveal from "./Reveal";
-import { LockIcon, ArrowRightIcon } from "./icons";
+import { ArrowRightIcon } from "./icons";
 
 export default function Projects() {
   const { t, lang } = useApp();
@@ -54,15 +54,8 @@ export default function Projects() {
                     ))}
                   </div>
 
-                  <div className="mt-6 flex items-center gap-2 pt-2 text-xs font-medium text-neutral-400 dark:text-neutral-500">
-                    {p.privateCode ? (
-                      <>
-                        <LockIcon width={14} height={14} />
-                        <span>
-                          {t.projects.privateCode} · {t.projects.caseStudy}
-                        </span>
-                      </>
-                    ) : p.repo ? (
+                  {p.repo && (
+                    <div className="mt-6 flex items-center gap-2 pt-2 text-xs font-medium">
                       <a
                         href={p.repo}
                         target="_blank"
@@ -72,10 +65,8 @@ export default function Projects() {
                         {t.projects.viewCode}
                         <ArrowRightIcon width={14} height={14} />
                       </a>
-                    ) : (
-                      <span>{t.projects.caseStudy}</span>
-                    )}
-                  </div>
+                    </div>
+                  )}
                 </div>
               </article>
             </Reveal>

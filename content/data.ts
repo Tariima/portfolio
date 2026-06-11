@@ -15,8 +15,12 @@ export const skills: SkillGroup[] = [
     items: ["Node.js", "Python", "FastAPI", "tRPC", "REST APIs"],
   },
   {
+    label: { es: "Mobile", en: "Mobile" },
+    items: ["Flutter", "Dart"],
+  },
+  {
     label: { es: "Datos", en: "Data" },
-    items: ["PostgreSQL", "Supabase", "SQL", "MySQL"],
+    items: ["PostgreSQL", "Supabase", "Redis", "SQL", "MySQL"],
   },
   {
     label: { es: "DevOps & Tools", en: "DevOps & Tools" },
@@ -27,6 +31,7 @@ export const skills: SkillGroup[] = [
     items: [
       "Auth / JWT",
       "Row-Level Security",
+      "WebSockets",
       "Webhooks",
       "Integración de pagos",
       "CI / CD",
@@ -41,44 +46,42 @@ export type Project = {
   highlights: Localized[];
   stack: string[];
   accent: string; // tailwind gradient classes
-  privateCode?: boolean;
   repo?: string;
   featured: boolean;
 };
 
 export const projects: Project[] = [
   {
-    id: "ticketing",
+    id: "taskflow",
     featured: true,
-    accent: "from-sky-500 to-indigo-600",
+    accent: "from-blue-500 to-cyan-600",
     title: {
-      es: "Plataforma de venta de entradas y control de acceso",
-      en: "Event ticketing & access control platform",
+      es: "Plataforma de gestión de pedidos y producción",
+      en: "Order & production management platform",
     },
     summary: {
-      es: "Sistema multi-tenant para vender entradas a eventos con pago online y validación de acceso en puerta, incluso sin conexión.",
-      en: "Multi-tenant system to sell event tickets with online payment and at-the-door access validation, even offline.",
+      es: "Sistema empresarial para gestionar pedidos y producción en tiempo real, con dashboard web de administración y app móvil para el personal de campo.",
+      en: "Enterprise system to manage orders and production in real time, with a web admin dashboard and a mobile app for field staff.",
     },
     highlights: [
       {
-        es: "QR firmados con HMAC para entradas imposibles de falsificar.",
-        en: "HMAC-signed QR codes for tamper-proof tickets.",
+        es: "Actualizaciones en tiempo real con WebSockets (estados de pedidos y métricas).",
+        en: "Real-time updates over WebSockets (order states and metrics).",
       },
       {
-        es: "PWA offline: escaneo y validación en puerta sin internet, con sincronización posterior.",
-        en: "Offline PWA: scan and validate at the door with no internet, syncing afterwards.",
+        es: "Control de acceso por roles (admin / supervisor / empleado) y auditoría completa.",
+        en: "Role-based access control (admin / supervisor / employee) and full audit trail.",
       },
       {
-        es: "Webhooks de pago idempotentes con manejo de cupos atómico.",
-        en: "Idempotent payment webhooks with atomic quota handling.",
+        es: "Dashboard React con métricas en vivo y exportación a PDF / Excel / CSV.",
+        en: "React dashboard with live metrics and PDF / Excel / CSV export.",
       },
       {
-        es: "Tests sobre la firma de QR y el flujo de pago.",
-        en: "Tests covering QR signing and the payment flow.",
+        es: "App móvil para operarios y automatización de tareas programadas.",
+        en: "Mobile app for operators and scheduled task automation.",
       },
     ],
-    stack: ["Next.js 15", "TypeScript", "Supabase", "PostgreSQL", "Mercado Pago", "PWA", "Vitest", "Vercel"],
-    privateCode: true,
+    stack: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL", "Redis", "Flutter", "WebSockets", "Docker"],
   },
   {
     id: "saas-reporting",
@@ -111,7 +114,6 @@ export const projects: Project[] = [
       },
     ],
     stack: ["Next.js 15", "TypeScript", "Supabase", "PostgreSQL", "RLS", "Tailwind CSS"],
-    privateCode: true,
   },
   {
     id: "marketing-ops",
@@ -144,12 +146,99 @@ export const projects: Project[] = [
       },
     ],
     stack: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "Recharts", "@dnd-kit"],
-    privateCode: true,
+  },
+  {
+    id: "fleet-tracker",
+    featured: true,
+    accent: "from-sky-500 to-indigo-600",
+    title: {
+      es: "App de estadísticas deportivas en tiempo real",
+      en: "Real-time sports statistics app",
+    },
+    summary: {
+      es: "Aplicación multiplataforma para capturar estadísticas de partidos en vivo, con entrada rápida por teclado y sincronización en la nube.",
+      en: "Cross-platform app to capture live match statistics, with keyboard-fast input and cloud sync.",
+    },
+    highlights: [
+      {
+        es: "Multiplataforma (Android, iOS, web y escritorio) desde una sola base de código.",
+        en: "Cross-platform (Android, iOS, web and desktop) from a single codebase.",
+      },
+      {
+        es: "Autenticación con JWT, almacenamiento seguro y 2FA.",
+        en: "JWT authentication, secure storage and 2FA.",
+      },
+      {
+        es: "Captura optimizada por atajos de teclado con guardado automático.",
+        en: "Keyboard-shortcut-optimized capture with auto-save.",
+      },
+    ],
+    stack: ["Flutter", "Dart", "FastAPI", "Python", "PostgreSQL", "JWT", "Docker"],
+  },
+  {
+    id: "scoutpro",
+    featured: true,
+    accent: "from-violet-500 to-purple-600",
+    title: {
+      es: "Sistema de evaluación y scouting de jugadores",
+      en: "Player evaluation & scouting system",
+    },
+    summary: {
+      es: "Herramienta para evaluar varios jugadores en vivo con escalas configurables, seguimiento de tiempo en cancha y reportes profesionales.",
+      en: "Tool to evaluate multiple players live with configurable scales, time-on-field tracking and professional reports.",
+    },
+    highlights: [
+      {
+        es: "Evaluación simultánea de varios jugadores con características puntuables 0-10.",
+        en: "Simultaneous multi-player evaluation with 0-10 scorable traits.",
+      },
+      {
+        es: "Reportes con promedios, tendencias y exportación a PDF / CSV.",
+        en: "Reports with averages, trends and PDF / CSV export.",
+      },
+      {
+        es: "Migraciones de base de datos y guardado automático.",
+        en: "Database migrations and auto-save.",
+      },
+    ],
+    stack: ["Flutter", "Dart", "FastAPI", "Python", "PostgreSQL", "Alembic"],
+  },
+  {
+    id: "ticketing",
+    featured: true,
+    accent: "from-amber-500 to-orange-600",
+    title: {
+      es: "Plataforma de venta de entradas y control de acceso",
+      en: "Event ticketing & access control platform",
+    },
+    summary: {
+      es: "Sistema multi-tenant para vender entradas a eventos con pago online y validación de acceso en puerta, incluso sin conexión.",
+      en: "Multi-tenant system to sell event tickets with online payment and at-the-door access validation, even offline.",
+    },
+    highlights: [
+      {
+        es: "QR firmados con HMAC para entradas imposibles de falsificar.",
+        en: "HMAC-signed QR codes for tamper-proof tickets.",
+      },
+      {
+        es: "PWA offline: escaneo y validación en puerta sin internet, con sincronización posterior.",
+        en: "Offline PWA: scan and validate at the door with no internet, syncing afterwards.",
+      },
+      {
+        es: "Webhooks de pago idempotentes con manejo de cupos atómico.",
+        en: "Idempotent payment webhooks with atomic quota handling.",
+      },
+      {
+        es: "Tests sobre la firma de QR y el flujo de pago.",
+        en: "Tests covering QR signing and the payment flow.",
+      },
+    ],
+    stack: ["Next.js 15", "TypeScript", "Supabase", "PostgreSQL", "Mercado Pago", "PWA", "Vitest", "Vercel"],
   },
   {
     id: "nlp-tool",
-    featured: true,
-    accent: "from-amber-500 to-orange-600",
+    featured: false,
+    accent: "from-neutral-500 to-neutral-700",
     title: {
       es: "Herramienta de recomendación con NLP",
       en: "NLP-based recommendation tool",
@@ -158,22 +247,8 @@ export const projects: Project[] = [
       es: "Herramienta propia que recomienda opciones analizando texto con embeddings y similitud semántica.",
       en: "A personal tool that recommends options by analyzing text with embeddings and semantic similarity.",
     },
-    highlights: [
-      {
-        es: "Embeddings con sentence-transformers y ranking por similitud coseno.",
-        en: "Embeddings with sentence-transformers and cosine-similarity ranking.",
-      },
-      {
-        es: "Scraper con Selenium para alimentar y actualizar los datos.",
-        en: "Selenium scraper to feed and refresh the data.",
-      },
-      {
-        es: "Interfaz de escritorio en Python (Tkinter).",
-        en: "Python desktop interface (Tkinter).",
-      },
-    ],
-    stack: ["Python", "sentence-transformers", "Selenium", "Pandas", "Tkinter"],
-    privateCode: true,
+    highlights: [],
+    stack: ["Python", "sentence-transformers", "Selenium", "Tkinter"],
   },
   {
     id: "fleet",
