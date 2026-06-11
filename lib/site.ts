@@ -5,5 +5,5 @@ export const SITE = {
   github: "https://github.com/Tariima",
   githubUser: "Tariima",
   linkedin: "https://www.linkedin.com/in/msione03/",
-  url: "https://matiassione.vercel.app",
+  url: "https://portfolio-six-beta-qk2tnvdm9l.vercel.app",
 } as const;
