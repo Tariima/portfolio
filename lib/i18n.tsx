@@ -45,7 +45,7 @@ export const dict = {
     },
     contact: {
       title: "Contacto",
-      text: "¿Tenés un proyecto en mente o una oportunidad? Escribime.",
+      text: "¿Tenés un proyecto en mente? Me encantaría escucharlo.",
       emailCta: "Enviar email",
     },
     footer: { madeWith: "Hecho con Next.js y Tailwind CSS" },
@@ -78,7 +78,7 @@ export const dict = {
     },
     contact: {
       title: "Contact",
-      text: "Got a project in mind or an opportunity? Reach out.",
+      text: "Got a project in mind? I'd love to hear about it.",
       emailCta: "Send email",
     },
     footer: { madeWith: "Built with Next.js and Tailwind CSS" },
