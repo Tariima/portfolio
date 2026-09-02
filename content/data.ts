@@ -76,7 +76,7 @@ export type EducationItem = {
 
 export const metrics: Metric[] = [
   {
-    value: 16,
+    value: 13,
     label: {
       es: "proyectos construidos, de la base de datos al deploy",
       en: "projects built, from the database to the deploy",
@@ -119,8 +119,8 @@ export const shipLog: ShipEntry[] = [
     date: "2026-08",
     env: "prod",
     text: {
-      es: "Gestor de campañas outbound + white-label por cliente en Solvant Platform",
-      en: "Outbound campaign manager + per-client white-label on Solvant Platform",
+      es: "Consola de cobranzas, discador y agenda sin doble turno para el estudio jurídico en el portal de clientes",
+      en: "Collections console, dialer and double-booking-proof agenda for the law firm in the client portal",
     },
   },
   {
@@ -228,8 +228,8 @@ export const experience: Experience[] = [
         en: "Lead author of a law firm's system: AI voice dialer + collections bot with a SQL cadence engine (ramp-up, weekly quotas, time windows, opt-out) and human takeover.",
       },
       {
-        es: "Desarrollador principal de Solvant Platform (portal de clientes): gestor de campañas outbound, cifrado AES-256-GCM de credenciales, sync idempotente contra Retell y RLS en todas las tablas.",
-        en: "Lead developer of Solvant Platform (client portal): outbound campaign manager, AES-256-GCM credential encryption, idempotent sync against Retell and RLS on every table.",
+        es: "Módulos por cliente en Solvant Platform (portal de clientes): consola de cobranzas con calculadora de ofertas y puente al asesor, discador y agenda con reservas sin doble turno, configuración de líneas de WhatsApp y credenciales de Chatwoot.",
+        en: "Per-client modules in Solvant Platform (client portal): collections console with offer calculator and hand-off to an advisor, dialer and double-booking-proof agenda, WhatsApp line configuration and Chatwoot credentials.",
       },
       {
         es: "Plataforma multi-tenant para una agencia de marketing (~20 workspaces): frontend Next.js 16 / React 19, cierre de brechas de RLS y migraciones del esquema.",
@@ -295,10 +295,6 @@ export const experience: Experience[] = [
       {
         es: "Trazabilidad de rondas para una empresa de seguridad privada: web + app nativa Android con geocercas, QR aleatorio, botón de pánico y aislamiento multi-cliente por RLS.",
         en: "Patrol traceability for a private-security company: web + native Android app with geofences, random-QR challenges, panic button and per-client RLS isolation.",
-      },
-      {
-        es: "Web operativa para un estudio de fotografía de eventos: presupuestos en PDF en menos de un minuto y campaña de beneficios por QR con atribución.",
-        en: "Operational website for an event-photography studio: PDF quotes in under a minute and a QR benefits campaign with attribution.",
       },
     ],
     stack: ["Next.js", "React", "Expo", "Supabase", "Mercado Pago", "PWA", "Vitest"],
@@ -400,44 +396,26 @@ export const projects: Project[] = [
   },
   {
     id: "solvant-platform",
-    featured: true,
+    featured: false,
     status: "prod",
     context: "solvant",
-    role: { es: "Desarrollador principal", en: "Lead developer" },
+    role: { es: "Módulos por cliente sobre el portal existente", en: "Per-client modules on the existing portal" },
     period: "2026",
     title: {
-      es: "Solvant Platform — portal de clientes y gestor de campañas outbound",
-      en: "Solvant Platform — client portal and outbound campaign manager",
+      es: "Solvant Platform — módulos por cliente en el portal",
+      en: "Solvant Platform — per-client modules in the portal",
     },
     problem: {
-      es: "Cada cliente de la consultora necesitaba ver qué hacen sus agentes de voz y lanzar campañas por su cuenta, sin depender del equipo y sin ver datos de otros clientes.",
-      en: "Every client of the consultancy needed to see what their voice agents do and launch campaigns on their own, without depending on the team and without seeing other clients' data.",
+      es: "El portal de clientes ya existía; cada cliente nuevo necesitaba pantallas y reglas propias sin romper las de los demás.",
+      en: "The client portal already existed; each new client needed its own screens and rules without breaking everyone else's.",
     },
     built: [
       {
-        es: "Multi-tenant con Row-Level Security en todas las tablas y routing por rol (cliente / admin).",
-        en: "Multi-tenant with Row-Level Security on every table and role-based routing (client / admin).",
-      },
-      {
-        es: "Cifrado AES-256-GCM de las API keys de cada cliente; se descifran solo en memoria del servidor durante un sync.",
-        en: "AES-256-GCM encryption of each client's API keys; decrypted only in server memory during a sync.",
-      },
-      {
-        es: "Sync idempotente contra Retell (agentes, números, llamadas) con journal de cada corrida.",
-        en: "Idempotent sync against Retell (agents, numbers, calls) with a journal of every run.",
-      },
-      {
-        es: "Motor de cadencias con cron cada 5 minutos, reintentos configurables, cierre automático, reporte diario y white-label por cliente.",
-        en: "Cadence engine with a 5-minute cron, configurable retries, auto-completion, daily report and per-client white-label.",
+        es: "Consola de cobranzas del estudio jurídico (calculadora de ofertas, preview del WhatsApp, puente al asesor, gates de auditoría), agenda con reservas sin doble turno, ajustes del discador, líneas de WhatsApp y credenciales de Chatwoot por cliente.",
+        en: "Law-firm collections console (offer calculator, WhatsApp preview, hand-off to an advisor, audit gates), double-booking-proof agenda, dialer tweaks, per-client WhatsApp lines and Chatwoot credentials.",
       },
     ],
-    metrics: [
-      { value: "RLS", label: { es: "en todas las tablas", en: "on every table" } },
-      { value: "AES-256", label: { es: "credenciales cifradas en reposo", en: "credentials encrypted at rest" } },
-      { value: "5 min", label: { es: "cron del motor de cadencias", en: "cadence-engine cron" } },
-      { value: "White-label", label: { es: "por cliente", en: "per client" } },
-    ],
-    stack: ["Next.js 15", "React 19", "TypeScript", "Supabase", "PostgreSQL", "Retell API", "Tailwind 4", "Docker"],
+    stack: ["Next.js 15", "React 19", "TypeScript", "Supabase", "PostgreSQL", "Chatwoot"],
     link: "https://clientes.solvant.com.ar",
   },
   {
@@ -687,26 +665,6 @@ export const projects: Project[] = [
     stack: ["Flutter", "FastAPI", "pyotp", "JWT", "PostgreSQL"],
   },
   {
-    id: "photo-studio",
-    featured: false,
-    status: "dev",
-    context: "freelance",
-    role: { es: "Autor único", en: "Sole author" },
-    period: "2026",
-    title: { es: "Web operativa para un estudio de fotografía de eventos", en: "Operational website for an event-photography studio" },
-    problem: {
-      es: "Quien responde primero con una propuesta seria se queda con la fecha; el fotógrafo armaba cada presupuesto a mano.",
-      en: "Whoever answers first with a serious proposal wins the date; the photographer built every quote by hand.",
-    },
-    built: [
-      {
-        es: "Panel privado que genera presupuestos en PDF en menos de un minuto, campaña de beneficios por QR con atribución y galerías desde SmugMug.",
-        en: "Private panel that generates PDF quotes in under a minute, a QR benefits campaign with attribution and SmugMug-fed galleries.",
-      },
-    ],
-    stack: ["Next.js 16", "React 19", "TypeScript", "Tailwind 4", "Vercel"],
-  },
-  {
     id: "tif-gym",
     featured: false,
     status: "dev",
@@ -725,46 +683,6 @@ export const projects: Project[] = [
       },
     ],
     stack: [".NET", "C#", "React", "REST", "SQL"],
-  },
-  {
-    id: "grow-an-abyss",
-    featured: false,
-    status: "dev",
-    context: "personal",
-    role: { es: "Autor único", en: "Sole author" },
-    period: "2026",
-    title: { es: "Grow an Abyss — juego idle para Roblox", en: "Grow an Abyss — idle game for Roblox" },
-    problem: {
-      es: "Un ecosistema bioluminiscente que crece mientras descendés: cuanto más profundo, más raras las criaturas.",
-      en: "A bioluminescent ecosystem that grows as you descend: the deeper you go, the rarer the creatures.",
-    },
-    built: [
-      {
-        es: "Prototipo jugable en Luau con Rojo: tres loops (atraer, ecosistema, mejoras + descenso), bestiario y mundo construido en runtime.",
-        en: "Playable Luau prototype with Rojo: three loops (attract, ecosystem, upgrades + descent), bestiary and a world built at runtime.",
-      },
-    ],
-    stack: ["Luau", "Roblox Studio", "Rojo"],
-  },
-  {
-    id: "nlp-recommender",
-    featured: false,
-    status: "done",
-    context: "personal",
-    role: { es: "Autor único", en: "Sole author" },
-    period: "2024",
-    title: { es: "Recomendador con NLP para League of Legends", en: "NLP recommender for League of Legends" },
-    problem: {
-      es: "Recomendar opciones a partir de texto libre, sin reglas escritas a mano.",
-      en: "Recommend options from free text, without hand-written rules.",
-    },
-    built: [
-      {
-        es: "Embeddings con sentence-transformers, similitud coseno y un scraper Selenium para armar el dataset; interfaz en Tkinter.",
-        en: "sentence-transformers embeddings, cosine similarity and a Selenium scraper to build the dataset; Tkinter UI.",
-      },
-    ],
-    stack: ["Python", "sentence-transformers", "Selenium", "Tkinter"],
   },
   {
     id: "python-collection",
@@ -795,7 +713,7 @@ export const projects: Project[] = [
 export const skills: SkillGroup[] = [
   {
     label: { es: "Lenguajes", en: "Languages" },
-    items: ["TypeScript", "JavaScript", "Python", "SQL", "Dart", "C# / .NET", "Luau"],
+    items: ["TypeScript", "JavaScript", "Python", "SQL", "Dart", "C# / .NET"],
   },
   {
     label: { es: "Frontend", en: "Frontend" },
@@ -827,7 +745,7 @@ export const skills: SkillGroup[] = [
   },
   {
     label: { es: "Integraciones", en: "Integrations" },
-    items: ["Mercado Pago (OAuth, webhooks)", "Resend", "Telegram", "Meta / TikTok / YouTube OAuth", "SmugMug", "RPA (Playwright, Scrapling)"],
+    items: ["Mercado Pago (OAuth, webhooks)", "Resend", "Telegram", "Meta / TikTok / YouTube OAuth", "RPA (Playwright, Scrapling)"],
   },
 ];
 
