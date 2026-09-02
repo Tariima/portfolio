@@ -42,9 +42,9 @@ export default function OpenGraphImage() {
             <span style={{ fontSize: 44, fontWeight: 800, color: "#edf0fa" }}>8</span>
             <span>productos en producción</span>
           </div>
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <span style={{ fontSize: 44, fontWeight: 800, color: "#edf0fa" }}>msione-portfolio.vercel.app</span>
-            <span>portfolio · github.com/Tariima</span>
+          <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-end" }}>
+            <span style={{ fontSize: 30, fontWeight: 700, color: "#edf0fa" }}>msione-portfolio.vercel.app</span>
+            <span>github.com/Tariima</span>
           </div>
         </div>
       </div>
