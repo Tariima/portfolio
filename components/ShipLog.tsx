@@ -9,7 +9,7 @@ export default function ShipLog() {
   return (
     <div className="overflow-hidden rounded-2xl border border-line bg-bg2 shadow-[var(--shadow)]">
       <div className="flex items-center gap-2 border-b border-line px-4 py-2.5">
-        <span className="h-2.5 w-2.5 rounded-full bg-terra/80" />
+        <span className="h-2.5 w-2.5 rounded-full bg-fg/25" />
         <span className="h-2.5 w-2.5 rounded-full bg-accent/80" />
         <span className="h-2.5 w-2.5 rounded-full bg-ok/80" />
         <span className="ml-2 truncate font-mono text-[11px] uppercase tracking-[0.14em] text-muted">

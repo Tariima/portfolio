@@ -63,8 +63,8 @@ export default function Hero() {
 
         {/* Right: photo + ship log */}
         <div className="rise relative lg:pt-40" style={{ animationDelay: "260ms" }}>
-          <div className="absolute -top-2 right-6 z-10 hidden w-36 rotate-3 overflow-hidden rounded-2xl border border-line bg-terra shadow-xl transition-transform duration-500 hover:rotate-0 lg:block">
-            <Image src="/foto.webp" alt={t.hero.photoAlt} width={320} height={400} priority className="block h-auto w-full" />
+          <div className="photo-card absolute -top-2 right-6 z-10 hidden w-36 rotate-3 overflow-hidden rounded-2xl border border-line shadow-xl transition-transform duration-500 hover:rotate-0 lg:block">
+            <Image src="/foto.webp" alt={t.hero.photoAlt} width={320} height={400} priority className="relative block h-auto w-full" />
           </div>
           <div className="absolute left-0 top-10 hidden max-w-[16rem] font-mono text-[11.5px] leading-relaxed text-muted lg:block">
             <span className="text-accent">//</span> {SITE.location}
@@ -74,8 +74,8 @@ export default function Hero() {
             <span className="text-accent">//</span> Solvant · Krownsoft · Nocta
           </div>
           <div className="mb-5 flex items-center gap-4 lg:hidden">
-            <div className="h-16 w-16 shrink-0 overflow-hidden rounded-full border border-line bg-terra">
-              <Image src="/foto-sm.webp" alt={t.hero.photoAlt} width={160} height={200} priority className="block h-full w-full object-cover object-top" />
+            <div className="photo-card h-16 w-16 shrink-0 overflow-hidden rounded-full border border-line">
+              <Image src="/foto-sm.webp" alt={t.hero.photoAlt} width={160} height={200} priority className="relative block h-full w-full object-cover object-top" />
             </div>
             <div className="font-mono text-[12px] text-muted">
               {SITE.location} · GitHub @{SITE.githubUser}

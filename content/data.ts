@@ -76,11 +76,10 @@ export type EducationItem = {
 
 export const metrics: Metric[] = [
   {
-    value: 1500,
-    prefix: "+",
+    value: 16,
     label: {
-      es: "commits en repos de equipo desde 2025",
-      en: "commits in team repos since 2025",
+      es: "proyectos construidos, de la base de datos al deploy",
+      en: "projects built, from the database to the deploy",
     },
   },
   {
@@ -225,24 +224,24 @@ export const experience: Experience[] = [
     },
     bullets: [
       {
-        es: "Autor principal (~90% de los commits) del sistema de un estudio jurídico: discador de voz con IA + bot de cobranzas con motor de cadencias en SQL (ramp-up, cupos semanales, ventanas horarias, opt-out) y takeover humano.",
-        en: "Lead author (~90% of commits) of a law firm's system: AI voice dialer + collections bot with a SQL cadence engine (ramp-up, weekly quotas, time windows, opt-out) and human takeover.",
+        es: "Autor principal del sistema de un estudio jurídico: discador de voz con IA + bot de cobranzas con motor de cadencias en SQL (ramp-up, cupos semanales, ventanas horarias, opt-out) y takeover humano.",
+        en: "Lead author of a law firm's system: AI voice dialer + collections bot with a SQL cadence engine (ramp-up, weekly quotas, time windows, opt-out) and human takeover.",
       },
       {
-        es: "Solvant Platform (portal de clientes): gestor de campañas outbound, cifrado AES-256-GCM de credenciales, sync idempotente contra Retell y RLS en todas las tablas. Más de 200 commits.",
-        en: "Solvant Platform (client portal): outbound campaign manager, AES-256-GCM credential encryption, idempotent sync against Retell and RLS on every table. 200+ commits.",
+        es: "Desarrollador principal de Solvant Platform (portal de clientes): gestor de campañas outbound, cifrado AES-256-GCM de credenciales, sync idempotente contra Retell y RLS en todas las tablas.",
+        en: "Lead developer of Solvant Platform (client portal): outbound campaign manager, AES-256-GCM credential encryption, idempotent sync against Retell and RLS on every table.",
       },
       {
-        es: "Plataforma multi-tenant para una agencia de marketing (~20 workspaces): frontend Next.js 16 / React 19, cierre de brechas de RLS y migraciones. Segundo contribuidor del repo.",
-        en: "Multi-tenant platform for a marketing agency (~20 workspaces): Next.js 16 / React 19 frontend, RLS gap fixes and migrations. Second-largest contributor.",
+        es: "Plataforma multi-tenant para una agencia de marketing (~20 workspaces): frontend Next.js 16 / React 19, cierre de brechas de RLS y migraciones del esquema.",
+        en: "Multi-tenant platform for a marketing agency (~20 workspaces): Next.js 16 / React 19 frontend, RLS gap fixes and schema migrations.",
       },
       {
         es: "ERP a medida para un fabricante de carpintería de aluminio: frontend, schema del módulo de obras y suite E2E. En producción desde septiembre de 2026.",
         en: "Custom ERP for an aluminium-joinery manufacturer: frontend, works-module schema and E2E suite. In production since September 2026.",
       },
       {
-        es: "Agentes de ventas B2B por WhatsApp integrados a Odoo: workflows n8n generados como código, suite de 129 evaluaciones (DeepEval) con tests de efectos reales, monitoreo con dead-man switch.",
-        en: "B2B WhatsApp sales agents wired into Odoo: n8n workflows generated as code, a 129-eval suite (DeepEval) with real side-effect tests, dead-man-switch monitoring.",
+        es: "Agentes de ventas B2B por WhatsApp integrados a Odoo: workflows n8n generados como código, suite de evaluaciones automatizadas (DeepEval) con tests de efectos reales y monitoreo con dead-man switch.",
+        en: "B2B WhatsApp sales agents wired into Odoo: n8n workflows generated as code, an automated evaluation suite (DeepEval) with real side-effect tests and dead-man-switch monitoring.",
       },
       {
         es: "Integraciones sobre sistemas sin API (RPA con Playwright y Scrapling) y auditoría de drift de configuración tratada como falla de CI.",
@@ -264,12 +263,12 @@ export const experience: Experience[] = [
     },
     bullets: [
       {
-        es: "TaskFlow (pedidos y producción en tiempo real): mayor contribuidor con 466 de 983 commits. API FastAPI + PostgreSQL (40 migraciones), dashboard React 19, app Flutter para operarios, WebSockets, RBAC y auditoría. En producción.",
-        en: "TaskFlow (real-time orders & production): top contributor with 466 of 983 commits. FastAPI + PostgreSQL API (40 migrations), React 19 dashboard, Flutter app for operators, WebSockets, RBAC and audit log. In production.",
+        es: "TaskFlow (pedidos y producción en tiempo real): API FastAPI + PostgreSQL con migraciones Alembic, dashboard React 19, app Flutter para operarios, WebSockets, RBAC y auditoría. En producción.",
+        en: "TaskFlow (real-time orders & production): FastAPI + PostgreSQL API with Alembic migrations, React 19 dashboard, Flutter app for operators, WebSockets, RBAC and audit log. In production.",
       },
       {
-        es: "14 pipelines de GitHub Actions (staging y producción), Docker y Nginx; fixes de concurrencia en SQLAlchemy (joinedload + FOR UPDATE) y alertas de atraso con período de gracia.",
-        en: "14 GitHub Actions pipelines (staging and production), Docker and Nginx; SQLAlchemy concurrency fixes (joinedload + FOR UPDATE) and overdue alerts with grace periods.",
+        es: "Pipelines de GitHub Actions para staging y producción, Docker y Nginx; fixes de concurrencia en SQLAlchemy (joinedload + FOR UPDATE) y alertas de atraso con período de gracia.",
+        en: "GitHub Actions pipelines for staging and production, Docker and Nginx; SQLAlchemy concurrency fixes (joinedload + FOR UPDATE) and overdue alerts with grace periods.",
       },
       {
         es: "ScoutPro: definí la estructura del proyecto y la capa de persistencia de jugadores. F-Tracker: commit inicial y autenticación 2FA (TOTP) de punta a punta.",
@@ -282,7 +281,7 @@ export const experience: Experience[] = [
     id: "freelance",
     company: "Freelance",
     role: { es: "Desarrollador full-stack · productos propios y clientes directos", en: "Full-stack developer · own products and direct clients" },
-    period: { es: "2026", en: "2026" },
+    period: { es: "jun 2026 — actualidad", en: "Jun 2026 — present" },
     location: { es: "Rosario", en: "Rosario" },
     summary: {
       es: "Proyectos que llevo de punta a punta: relevamiento, arquitectura, código, pruebas de carga y entrega.",
@@ -317,7 +316,7 @@ export const projects: Project[] = [
     hero: true,
     status: "prod",
     context: "solvant",
-    role: { es: "Autor principal · ~90% de los commits", en: "Lead author · ~90% of commits" },
+    role: { es: "Autor principal del sistema", en: "Lead author of the system" },
     period: "2026",
     title: {
       es: "Discador de voz con IA + bot de cobranzas para un estudio jurídico",
@@ -351,9 +350,9 @@ export const projects: Project[] = [
     ],
     metrics: [
       { value: "~500", label: { es: "leads por mes", en: "leads per month" } },
-      { value: "17", label: { es: "migraciones SQL", en: "SQL migrations" } },
-      { value: "200", label: { es: "commits propios", en: "own commits" } },
+      { value: "24/7", label: { es: "cobertura del discador y el bot", en: "dialer and bot coverage" } },
       { value: "2", label: { es: "líneas de WhatsApp en producción", en: "WhatsApp lines in production" } },
+      { value: "3", label: { es: "productos: discador, cobranzas, demandas", en: "products: dialer, collections, lawsuits" } },
     ],
     stack: ["Retell AI", "n8n", "Supabase", "PostgreSQL", "Evolution API", "Next.js", "DeepEval", "Telegram"],
   },
@@ -362,7 +361,7 @@ export const projects: Project[] = [
     featured: true,
     status: "prod",
     context: "krownsoft",
-    role: { es: "Mayor contribuidor · 466 de 983 commits", en: "Top contributor · 466 of 983 commits" },
+    role: { es: "Full-stack: API, dashboard, app móvil y CI/CD", en: "Full-stack: API, dashboard, mobile app and CI/CD" },
     period: "2025 — 2026",
     title: {
       es: "TaskFlow — pedidos y producción en tiempo real",
@@ -374,8 +373,8 @@ export const projects: Project[] = [
     },
     built: [
       {
-        es: "API FastAPI + PostgreSQL con 40 migraciones Alembic, RBAC de tres niveles y auditoría exportable.",
-        en: "FastAPI + PostgreSQL API with 40 Alembic migrations, three-tier RBAC and exportable audit log.",
+        es: "API FastAPI + PostgreSQL con migraciones Alembic, RBAC de tres niveles y auditoría exportable.",
+        en: "FastAPI + PostgreSQL API with Alembic migrations, three-tier RBAC and exportable audit log.",
       },
       {
         es: "Dashboard React 19 con KPIs en vivo y app Flutter para operarios; WebSockets con fan-out a web y móvil.",
@@ -386,15 +385,15 @@ export const projects: Project[] = [
         en: "Overdue alerts with grace periods, bulk CSV import and a deadlock fix (joinedload + FOR UPDATE).",
       },
       {
-        es: "14 pipelines de GitHub Actions para staging y producción; Docker Compose + Nginx en VPS.",
-        en: "14 GitHub Actions pipelines for staging and production; Docker Compose + Nginx on a VPS.",
+        es: "Pipelines de GitHub Actions para staging y producción; Docker Compose + Nginx en VPS.",
+        en: "GitHub Actions pipelines for staging and production; Docker Compose + Nginx on a VPS.",
       },
     ],
     metrics: [
-      { value: "466", label: { es: "commits propios", en: "own commits" } },
-      { value: "40", label: { es: "migraciones", en: "migrations" } },
-      { value: "14", label: { es: "pipelines CI/CD", en: "CI/CD pipelines" } },
-      { value: "63", label: { es: "PRs mergeados", en: "merged PRs" } },
+      { value: "Web + móvil", label: { es: "dashboard React y app Flutter", en: "React dashboard and Flutter app" } },
+      { value: "Tiempo real", label: { es: "WebSockets a todos los clientes", en: "WebSockets to every client" } },
+      { value: "3 roles", label: { es: "RBAC y auditoría exportable", en: "RBAC and exportable audit log" } },
+      { value: "CI/CD", label: { es: "staging y producción automatizados", en: "automated staging and production" } },
     ],
     stack: ["FastAPI", "Python", "PostgreSQL", "React 19", "TypeScript", "Flutter", "WebSockets", "Docker", "Nginx", "GitHub Actions"],
     link: "https://dashboard.taskflow.com.ar",
@@ -404,7 +403,7 @@ export const projects: Project[] = [
     featured: true,
     status: "prod",
     context: "solvant",
-    role: { es: "Desarrollador principal · más de 200 commits", en: "Lead developer · 200+ commits" },
+    role: { es: "Desarrollador principal", en: "Lead developer" },
     period: "2026",
     title: {
       es: "Solvant Platform — portal de clientes y gestor de campañas outbound",
@@ -416,8 +415,8 @@ export const projects: Project[] = [
     },
     built: [
       {
-        es: "Multi-tenant con Row-Level Security en el 100% de las tablas y routing por rol (cliente / admin).",
-        en: "Multi-tenant with Row-Level Security on 100% of tables and role-based routing (client / admin).",
+        es: "Multi-tenant con Row-Level Security en todas las tablas y routing por rol (cliente / admin).",
+        en: "Multi-tenant with Row-Level Security on every table and role-based routing (client / admin).",
       },
       {
         es: "Cifrado AES-256-GCM de las API keys de cada cliente; se descifran solo en memoria del servidor durante un sync.",
@@ -433,9 +432,10 @@ export const projects: Project[] = [
       },
     ],
     metrics: [
-      { value: "52", label: { es: "migraciones", en: "migrations" } },
-      { value: "+200", label: { es: "commits propios", en: "own commits" } },
-      { value: "100%", label: { es: "tablas con RLS", en: "tables under RLS" } },
+      { value: "RLS", label: { es: "en todas las tablas", en: "on every table" } },
+      { value: "AES-256", label: { es: "credenciales cifradas en reposo", en: "credentials encrypted at rest" } },
+      { value: "5 min", label: { es: "cron del motor de cadencias", en: "cadence-engine cron" } },
+      { value: "White-label", label: { es: "por cliente", en: "per client" } },
     ],
     stack: ["Next.js 15", "React 19", "TypeScript", "Supabase", "PostgreSQL", "Retell API", "Tailwind 4", "Docker"],
     link: "https://clientes.solvant.com.ar",
@@ -473,14 +473,14 @@ export const projects: Project[] = [
         en: "Atomic anti-oversell stock reservation; the webhook returns 500 to retry instead of losing a payment with no QR issued.",
       },
       {
-        es: "Motor de promos y combos, 21 suites de tests (Vitest) y pruebas de carga y concurrencia contra staging.",
-        en: "Promo and combo engine, 21 test suites (Vitest) and load/concurrency testing against staging.",
+        es: "Motor de promos y combos, suite de tests (Vitest) y pruebas de carga y concurrencia contra staging.",
+        en: "Promo and combo engine, a Vitest test suite and load/concurrency testing against staging.",
       },
     ],
     metrics: [
-      { value: "32", label: { es: "migraciones SQL", en: "SQL migrations" } },
-      { value: "21", label: { es: "suites de tests", en: "test suites" } },
-      { value: "118", label: { es: "commits", en: "commits" } },
+      { value: "0%", label: { es: "comisión: cada local cobra en su Mercado Pago", en: "fee: each venue collects in its own Mercado Pago" } },
+      { value: "Offline", label: { es: "validación en puerta sin internet", en: "door validation with no internet" } },
+      { value: "HMAC", label: { es: "QR firmados, imposibles de falsificar", en: "signed, tamper-proof QR codes" } },
       { value: "US$65", label: { es: "infra proyectada / mes", en: "projected infra / month" } },
     ],
     stack: ["Next.js 15", "React 19", "TypeScript", "Supabase", "Mercado Pago", "PWA", "Vitest", "Resend", "Vercel"],
@@ -520,9 +520,9 @@ export const projects: Project[] = [
     ],
     metrics: [
       { value: "6", label: { es: "demos entregadas", en: "demos delivered" } },
-      { value: "7", label: { es: "migraciones", en: "migrations" } },
       { value: "3+1", label: { es: "roles + superadmin", en: "roles + superadmin" } },
-      { value: "0", label: { es: "dependencias en el paquete shared", en: "dependencies in the shared package" } },
+      { value: "Geocerca", label: { es: "bloquea escaneos lejanos", en: "blocks far-away scans" } },
+      { value: "Android", label: { es: "app nativa con Expo", en: "native app with Expo" } },
     ],
     stack: ["Next.js 16", "React 19", "Expo", "React Native", "Supabase", "PostgreSQL", "Tailwind 4", "Vitest"],
   },
@@ -531,7 +531,7 @@ export const projects: Project[] = [
     featured: true,
     status: "prod",
     context: "solvant",
-    role: { es: "Segundo contribuidor · ~260 commits", en: "Second contributor · ~260 commits" },
+    role: { es: "Frontend y seguridad de datos (RLS)", en: "Frontend and data security (RLS)" },
     period: "2026",
     title: {
       es: "Plataforma multi-tenant para una agencia de marketing (~20 workspaces)",
@@ -547,18 +547,18 @@ export const projects: Project[] = [
         en: "Next.js 16 / React 19 frontend: multi-platform composer with faithful previews (IG, FB, TikTok, YT), calendar, kanban and a co-branded client portal with an editable Brand Kit.",
       },
       {
-        es: "Cierre de brechas de escritura entre clientes en las políticas de RLS; migraciones sobre un esquema de casi 300.",
-        en: "Closed cross-client write gaps in the RLS policies; migrations on a schema of nearly 300.",
+        es: "Cierre de brechas de escritura entre clientes en las políticas de RLS y migraciones del esquema.",
+        en: "Closed cross-client write gaps in the RLS policies and schema migrations.",
       },
       {
-        es: "Routing por host (cliente. / agencia.) en middleware y CI de cuatro pipelines con Vitest y Playwright.",
-        en: "Host-based routing (client. / agency.) in middleware and a four-pipeline CI with Vitest and Playwright.",
+        es: "Routing por host (cliente. / agencia.) en middleware y CI con Vitest y Playwright.",
+        en: "Host-based routing (client. / agency.) in middleware and CI with Vitest and Playwright.",
       },
     ],
     metrics: [
       { value: "~20", label: { es: "workspaces", en: "workspaces" } },
-      { value: "296", label: { es: "migraciones (proyecto)", en: "migrations (project)" } },
-      { value: "~260", label: { es: "commits propios", en: "own commits" } },
+      { value: "4", label: { es: "redes con previews fieles", en: "networks with faithful previews" } },
+      { value: "Co-branded", label: { es: "portal de cliente con Brand Kit", en: "client portal with Brand Kit" } },
     ],
     stack: ["Next.js 16", "React 19", "TypeScript", "Supabase", "Tailwind 4", "Playwright", "Docker", "EasyPanel"],
   },
@@ -567,7 +567,7 @@ export const projects: Project[] = [
     featured: true,
     status: "prod",
     context: "solvant",
-    role: { es: "Frontend, schema del módulo de obras y suite E2E · 116 commits", en: "Frontend, works-module schema and E2E suite · 116 commits" },
+    role: { es: "Frontend, módulo de obras y pruebas E2E", en: "Frontend, works module and E2E tests" },
     period: "2026",
     title: {
       es: "ERP a medida para un fabricante de carpintería de aluminio",
@@ -587,14 +587,14 @@ export const projects: Project[] = [
         en: "Works-module schema and E2E suite; CI with a calibration job that fails the PR if the pricing engine drifts from the baseline.",
       },
       {
-        es: "Motor de precios calibrado a 1,10% de error contra 12.897 aberturas reales; pase a producción el 2 de septiembre de 2026.",
-        en: "Pricing engine calibrated to 1.10% error against 12,897 real openings; production cutover on 2 September 2026.",
+        es: "Motor de precios calibrado contra miles de aberturas reales; pase a producción el 2 de septiembre de 2026.",
+        en: "Pricing engine calibrated against thousands of real openings; production cutover on 2 September 2026.",
       },
     ],
     metrics: [
       { value: "12.897", label: { es: "aberturas reales de calibración", en: "real openings used for calibration" } },
       { value: "1,10%", label: { es: "error del motor de precios", en: "pricing-engine error" } },
-      { value: "5", label: { es: "workflows de CI", en: "CI workflows" } },
+      { value: "sep 2026", label: { es: "en producción", en: "in production" } },
     ],
     stack: ["Next.js 16", "React 19", "TypeScript", "Supabase", "PostgreSQL", "Python", "GitHub Actions"],
   },
@@ -617,8 +617,8 @@ export const projects: Project[] = [
     },
     built: [
       {
-        es: "30 workflows n8n generados desde un builder Python idempotente por nombre; suite de 129 evaluaciones (DeepEval) con tests de efectos reales sobre Odoo; monitoreo con dead-man switch y dedupe de ráfagas.",
-        en: "30 n8n workflows generated from an idempotent-by-name Python builder; a 129-eval suite (DeepEval) with real side-effect tests on Odoo; dead-man-switch monitoring and burst dedupe.",
+        es: "Decenas de workflows n8n generados desde un builder Python idempotente por nombre; suite de evaluaciones (DeepEval) con tests de efectos reales sobre Odoo; monitoreo con dead-man switch y dedupe de ráfagas.",
+        en: "Dozens of n8n workflows generated from an idempotent-by-name Python builder; an evaluation suite (DeepEval) with real side-effect tests on Odoo; dead-man-switch monitoring and burst dedupe.",
       },
     ],
     stack: ["n8n", "Odoo", "Supabase", "OpenAI", "Evolution API", "Chatwoot", "Python", "DeepEval"],
@@ -640,8 +640,8 @@ export const projects: Project[] = [
     },
     built: [
       {
-        es: "'API artificial' sobre portales sin API (Playwright + Scrapling), detector de suscripciones nuevas, 33 tests y un auditor de configuración que trata el drift como falla.",
-        en: "An 'artificial API' over API-less portals (Playwright + Scrapling), a new-subscription detector, 33 tests and a config auditor that treats drift as a failure.",
+        es: "'API artificial' sobre portales sin API (Playwright + Scrapling), detector de suscripciones nuevas, suite de tests y un auditor de configuración que trata el drift como falla.",
+        en: "An 'artificial API' over API-less portals (Playwright + Scrapling), a new-subscription detector, a test suite and a config auditor that treats drift as a failure.",
       },
     ],
     stack: ["n8n", "Python", "Playwright", "Supabase", "Retell AI", "Chatwoot"],
@@ -780,8 +780,8 @@ export const projects: Project[] = [
     },
     built: [
       {
-        es: "14 proyectos (scraping, asistente de voz, Space Invaders en Pygame), sistema de gestión de flota en POO (~1.800 líneas) y CNN / NLP con TensorFlow.",
-        en: "14 projects (scraping, voice assistant, Space Invaders in Pygame), an OOP fleet-management system (~1,800 lines) and CNN / NLP with TensorFlow.",
+        es: "14 proyectos (scraping, asistente de voz, Space Invaders en Pygame), sistema de gestión de flota en POO y CNN / NLP con TensorFlow.",
+        en: "14 projects (scraping, voice assistant, Space Invaders in Pygame), an OOP fleet-management system and CNN / NLP with TensorFlow.",
       },
     ],
     stack: ["Python", "Pygame", "TensorFlow", "Selenium"],

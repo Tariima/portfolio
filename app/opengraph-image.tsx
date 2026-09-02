@@ -35,8 +35,8 @@ export default function OpenGraphImage() {
 
         <div style={{ display: "flex", gap: 48, fontSize: 24, color: "#a79e91" }}>
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <span style={{ fontSize: 44, fontWeight: 800, color: "#f3eee4" }}>+1.500</span>
-            <span>commits en equipo</span>
+            <span style={{ fontSize: 44, fontWeight: 800, color: "#f3eee4" }}>16</span>
+            <span>proyectos construidos</span>
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <span style={{ fontSize: 44, fontWeight: 800, color: "#f3eee4" }}>8</span>

@@ -9,7 +9,7 @@ import { ArrowUpRightIcon, LockIcon } from "./icons";
 const statusDot: Record<Status, string> = {
   prod: "bg-ok",
   pilot: "bg-accent",
-  dev: "bg-terra",
+  dev: "bg-fg/40",
   done: "bg-muted",
 };
 
