@@ -31,6 +31,48 @@
   --grain-opacity: 0.07;
 }
 
+/* ---------- paletas alternativas (laboratorio, se eligen con data-palette) ---------- */
+html[data-palette="coral"] {
+  --bg: #faf4ef; --bg-2: #f2e9e1; --fg: #17110f; --muted: #6b5d57; --line: rgba(23, 17, 15, 0.14);
+  --accent: #d9432d; --accent-ink: #ffffff; --accent-soft: rgba(255, 106, 77, 0.2);
+}
+html.dark[data-palette="coral"] {
+  --bg: #0f0c0b; --bg-2: #171211; --fg: #f5efea; --muted: #a89a93; --line: rgba(245, 239, 234, 0.12);
+  --accent: #ff6b57; --accent-ink: #1a0f0c; --accent-soft: rgba(255, 107, 87, 0.16);
+}
+html[data-palette="menta"] {
+  --bg: #f2f6f3; --bg-2: #e7eee9; --fg: #0e1512; --muted: #5a6a62; --line: rgba(14, 21, 18, 0.14);
+  --accent: #0e7a5a; --accent-ink: #ffffff; --accent-soft: rgba(61, 220, 151, 0.22);
+}
+html.dark[data-palette="menta"] {
+  --bg: #090d0b; --bg-2: #101713; --fg: #ecf3ee; --muted: #93a39a; --line: rgba(236, 243, 238, 0.12);
+  --accent: #3ddc97; --accent-ink: #06130e; --accent-soft: rgba(61, 220, 151, 0.14);
+}
+html[data-palette="lima"] {
+  --bg: #f6f7ee; --bg-2: #eceFdf; --fg: #121408; --muted: #5e634c; --line: rgba(18, 20, 8, 0.14);
+  --accent: #5f7a00; --accent-ink: #ffffff; --accent-soft: rgba(200, 240, 60, 0.28);
+}
+html.dark[data-palette="lima"] {
+  --bg: #0b0c08; --bg-2: #13150d; --fg: #f2f4e8; --muted: #9ea48c; --line: rgba(242, 244, 232, 0.12);
+  --accent: #c8f03c; --accent-ink: #101300; --accent-soft: rgba(200, 240, 60, 0.14);
+}
+html[data-palette="cian"] {
+  --bg: #eef4f6; --bg-2: #e2ebef; --fg: #0a1418; --muted: #57676e; --line: rgba(10, 20, 24, 0.14);
+  --accent: #0b7285; --accent-ink: #ffffff; --accent-soft: rgba(34, 211, 238, 0.22);
+}
+html.dark[data-palette="cian"] {
+  --bg: #070d11; --bg-2: #0e161b; --fg: #eaf2f5; --muted: #8fa1a9; --line: rgba(234, 242, 245, 0.12);
+  --accent: #22d3ee; --accent-ink: #041014; --accent-soft: rgba(34, 211, 238, 0.14);
+}
+html[data-palette="mono"] {
+  --bg: #f7f7f5; --bg-2: #ecece9; --fg: #111111; --muted: #5f5f5c; --line: rgba(17, 17, 17, 0.14);
+  --accent: #111111; --accent-ink: #ffffff; --accent-soft: rgba(17, 17, 17, 0.1);
+}
+html.dark[data-palette="mono"] {
+  --bg: #0a0a0a; --bg-2: #141414; --fg: #f4f4f2; --muted: #9a9a96; --line: rgba(244, 244, 242, 0.12);
+  --accent: #ffffff; --accent-ink: #111111; --accent-soft: rgba(255, 255, 255, 0.1);
+}
+
 @theme inline {
   --color-bg: var(--bg);
   --color-bg2: var(--bg-2);

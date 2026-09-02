@@ -3,6 +3,7 @@ import { Bricolage_Grotesque, Instrument_Sans, JetBrains_Mono } from "next/font/
 import "./globals.css";
 import { AppProvider } from "@/lib/i18n";
 import { SITE } from "@/lib/site";
+import PaletteLab from "@/components/PaletteLab";
 
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -69,7 +70,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const themeScript = `(function(){try{var t=localStorage.getItem('theme');if(t==='light'){document.documentElement.classList.remove('dark')}else{document.documentElement.classList.add('dark')}}catch(e){document.documentElement.classList.add('dark')}})();`;
+const themeScript = `(function(){try{var t=localStorage.getItem('theme');if(t==='light'){document.documentElement.classList.remove('dark')}else{document.documentElement.classList.add('dark')}var p=localStorage.getItem('palette');if(p){document.documentElement.dataset.palette=p}}catch(e){document.documentElement.classList.add('dark')}})();`;
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -103,7 +104,10 @@ export default function RootLayout({
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
       <body className="bg-bg text-fg antialiased">
-        <AppProvider>{children}</AppProvider>
+        <AppProvider>
+          {children}
+          <PaletteLab />
+        </AppProvider>
       </body>
     </html>
   );
